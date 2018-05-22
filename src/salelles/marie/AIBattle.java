@@ -10,7 +10,7 @@ public class AIBattle extends Player {
 
 		private int level;
 		private List<Boolean> touched; 
-		private int touchedSize;//taille liste touched quand un bateau est coulé
+		private int touchedSize;//size list touched wen ship is sunk
 		
 		AIBattle(String name, int level) {
 			super(name);
@@ -29,8 +29,6 @@ public class AIBattle extends Player {
 				int coordChoice = random.nextInt(arrCoord.size());
 				coordEnd = arrCoord.get(coordChoice);
 			}while(!coordEnd.isValid());
-			//System.out.println("coord start :" + start);
-			//System.out.println("coord fin :" + coordEnd);
 			return new Coordinate[] {start, coordEnd};	
 		}
 		
@@ -135,8 +133,8 @@ public class AIBattle extends Player {
 	
 						do {
 							int intInd = random.nextInt(coordN.size());
-							coordChose =coordN.get(intInd);; //choose coords
-							if (shots.containsAll(coordN))  testAllTouchN= true; ; //if we have touch all the cases in coordN
+							coordChose =coordN.get(intInd); //choose coords
+							if (shots.containsAll(coordN))  testAllTouchN= true;  //if we have touch all the cases in coordN
 						}while (shots.contains(coordChose) && !testAllTouchN);
 	
 	
@@ -144,7 +142,7 @@ public class AIBattle extends Player {
 							return coordChose;
 						}
 					}
-				 // if don't touched anything
+				 // if don t touched anything
 					
 				do {
 					coordChose = Coordinate.giveCoordinate();

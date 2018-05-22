@@ -111,7 +111,7 @@ public class Player {
         Coordinate coord;
 
         do {
-        	 System.out.println("\nOù tirer ?");
+        	 System.out.println("\nOu tirer ?");
             coord = new Coordinate(sc.nextLine());
         } while (!coord.isValid());
         return coord;

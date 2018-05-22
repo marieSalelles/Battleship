@@ -146,7 +146,7 @@ public class Coordinate implements Cloneable, Comparable<Coordinate> {
     }
 
     public ArrayList<Coordinate> CoordCol(){
-    	int indiceS = this.getY();;
+    	int indiceS = this.getY();
 		
 		Coordinate choiceE; 
 		

@@ -125,7 +125,7 @@ public class Battleship {
 					if (!game.getCurrentPlayer().shootAtSunk(s)) {
 						System.out.print(s.toString());
 						System.out.print(s.getSpots());
-						System.out.println(" Nombre de cases touchées: " + s.getTouched());
+						System.out.println(" Number of touched case: " + s.getTouched());
 					}
 				}
 			}

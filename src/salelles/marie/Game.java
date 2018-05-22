@@ -11,20 +11,20 @@ public class Game {
 
     Game(String name1, String name2) {
         currentPlayer = new Player(name1);
-        otherPlayer = new Player(name2); //mettre AI
+        otherPlayer = new Player(name2); 
         firstPlayer= currentPlayer;
     }
     
     Game(String name1, String name2, int level) {
         currentPlayer = new Player(name1);
-        otherPlayer = new AIBattle(name2,level); //mettre AI
+        otherPlayer = new AIBattle(name2,level); 
         firstPlayer= currentPlayer;
         this.level=level;
     }
     
     public Game(String name1, String name2, int level,int level2) {
         currentPlayer = new AIBattle(name1,level);
-        otherPlayer = new AIBattle(name2,level2); //mettre AI
+        otherPlayer = new AIBattle(name2,level2); 
         firstPlayer= currentPlayer;
         this.level=level;
         this.level2=level2;
